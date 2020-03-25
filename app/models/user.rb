@@ -7,7 +7,7 @@ class User < ApplicationRecord
          
   has_many :articles, dependent: :destroy
   
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :favorite_articles, through: :favorites, source: :article
   
   def favorite(article)

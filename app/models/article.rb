@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   belongs_to :user
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :favorite_users, through: :reverses_of_favorites, source: :user
   
   attachment :article_image
