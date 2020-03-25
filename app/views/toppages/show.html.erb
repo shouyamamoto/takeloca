@@ -33,7 +33,9 @@
 
 <h4 class="text-center my-5 mx-4">みんなで情報を共有して、カメラライフを楽しみましょう!!</h4>
 
-<div class="text-center mb-4">
-  <%= link_to '新規登録', new_user_registration_path, class: 'btn btn-success' %>
-  <%= link_to 'ログイン', new_user_session_path, class: 'btn btn-primary ml-3' %>
-</div>
+<% if user_signed_in? %>
+  <div class="text-center mb-4">
+    <%= link_to '新規登録', new_user_registration_path, class: 'btn btn-success' %>
+    <%= link_to 'ログイン', new_user_session_path, class: 'btn btn-primary ml-3' %>
+  </div>
+<% end %>
