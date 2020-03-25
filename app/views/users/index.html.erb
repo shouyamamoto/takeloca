@@ -14,7 +14,7 @@
 <div class="card-container">
 <% @articles.each do |article| %>
   <%= link_to article do %>
-    <div class="card mx-2 mt-2">
+    <div class="card mx-1 mt-2">
       <%= attachment_image_tag article, :article_image , class: 'article_img_list'; %>
       <div class="card-body">
         <p class="card-text text-center text-muted"><%= article.user.name %></p>
