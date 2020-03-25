@@ -1,0 +1,26 @@
+<div class="container top-container">
+<h4 class="my-5 text-center">投稿一覧</h4>
+<p class="text-center">みんなの投稿を確認して、次の撮影場所を決めよう!!</p>
+
+<div class="text-center my-4">
+  <p class="mb-4">撮影場所を検索すると、その条件に当てはまった投稿が表示されます！</p>
+  <%= search_form_for(@search, url:search_users_path(@result)) do |f| %>
+  <%= f.select :location_eq, Article.locations.to_a.map { |location| [location[0], location[1]] } %>
+  <%= f.submit '検索', class: 'btn btn-success ml-5' %>
+<% end %>
+</div>
+
+
+<div class="card-container">
+<% @articles.each do |article| %>
+  <%= link_to article do %>
+    <div class="card mr-2 mt-2">
+      <%= attachment_image_tag article, :article_image , class: 'article_img_list'; %>
+      <div class="card-body">
+        <p class="card-text text-center text-muted"><%= article.user.name %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+</div>
+</div>

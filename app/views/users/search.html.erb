@@ -1,0 +1,25 @@
+<div class="container">
+<h4 class="text-center my-5">検索結果一覧</h4>
+<div class="my-3">
+  <%= link_to '⇦ 記事一覧へ戻る', users_path %>
+</div>
+
+<% if @articles.any? %>
+<div class="search-container container">
+  <% @articles.each do |article| %>
+    <%= link_to article do %>
+      <div class="card mr-1 mb-1">
+        <%= attachment_image_tag article, :article_image , class: 'article_img_list';%>
+        <div class="card-body">
+          <h6 class="card-title"><%= article.title%></h6>
+          <p class="card-text"><%= article.created_at.strftime("%Y年%m月%d日")%></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<% else %>
+  <p class="text-center my-5">条件に当てはまる記事は見つかりませんでした。<br>
+  別の条件で検索してください。</p>
+<% end %>
+</div>

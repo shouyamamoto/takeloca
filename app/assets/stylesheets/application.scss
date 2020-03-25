@@ -1,0 +1,453 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+ 
+.nav-item {
+  a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #2d2e2e;
+}
+a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+a:hover {
+  color: #ffe3f9;
+  transition: 0.3s;
+}
+a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+}
+
+a {
+  color: #2d2e2e;
+}
+a:hover {
+  color: #ffe3f9;
+  transition: .3s;
+}
+
+
+
+
+hr {
+  margin: 0;
+}
+ 
+.alert {
+  padding: 0;
+  margin: 0;
+}
+
+.bg-img {
+  height: 680px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#top_image {
+  position: relative;
+}
+
+.top_introduction {
+  position: absolute;
+  top: 90px;
+  left: 370px;
+  color: white;
+  background-color: rgba(0,0,0,0.3);
+  width: 50%;
+  height: 500px;
+  display: inline-block;
+  padding-top: 80px;
+}
+
+.btn_group {
+  margin-top: 50px;
+  padding:0 80px;
+}
+
+.mb-10 {
+  margin-bottom: 40px;
+}
+
+.login-container {
+  padding: 0 300px;
+}
+
+.signup_container {
+  padding: 0 300px;
+}
+
+.jumbotron {
+  margin: 0;
+}
+
+.about-top {
+  color: #2d2e2e;
+  background-color: #FAF9F8;
+  display: flex;
+}
+
+.about-img {
+  width:650px; 
+  height: auto;
+}
+
+.about-1-left {
+  width: 50%;
+  padding: 70px 50px;
+}
+
+.about-1-right {
+  width: 50%;
+}
+
+.about-mid {
+  display: flex;
+  background-color: rgb(212, 255, 246);
+}
+
+.about-2-left {
+  width: 50%;
+}
+
+.about-2-right {
+  width: 50%;
+  padding: 100px 50px;
+}
+
+.about-bottom {
+  color: #2d2e2e;
+  background-color: #FAF9F8;
+  display: flex;
+}
+
+.about-3-left {
+  width: 50%;
+  padding: 100px 48px;
+}
+
+.about-3-right {
+  width: 50%;
+}
+
+.edit-container {
+  padding: 0 300px;
+}
+
+.show-container {
+  padding: 0 100px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.article-contaicer {
+  padding: 0 150px;
+}
+
+.atricle-text-container {
+  padding: 0 80px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.card {
+  width: 30%;
+}
+
+.top-container {
+  padding: 0 70px;
+}
+
+.favorite-container {
+  padding: 0 80px;
+}
+
+.search-container {
+  padding: 0 65px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+span {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.navbar-toggler-icon {
+  margin: 0;
+}
+
+.article-image-list {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover;
+}
+
+.article_img_list {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  width: 20rem;
+}
+
+.card-image {
+  width: 312px;
+  height: 225px;
+  object-fit: cover;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%;
+    height: auto;
+}
+
+ 
+@media (max-width: 575px) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  h4 {
+    font-size: 14px;
+  }
+  
+  p {
+    font-size: 10px;
+  }
+  
+  .bg-img {
+    height: 460px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+ .top_introduction {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 80%;
+    height: 295px;
+    display: inline-block;
+    padding-top: 60px;
+    font-size: 14px;
+  }
+  
+  .navbar-toggler-icon {
+    margin: -20px;
+    margin-top: -10px;
+  }
+  
+  .mb-10 {
+    margin-bottom: 10px;
+  }
+  
+  .btn_group {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  
+  .about-top {
+    color: #2d2e2e;
+    background-color: #FAF9F8;
+    display: block;
+  }
+  
+  .about-1-left {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .about-1-right {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .about-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  span {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  
+  .mb-5, .my-5 {
+    margin-bottom: 1rem!important;
+  }
+  
+  .about-mid {
+    display: block;
+  }
+  
+  .about-2-right {
+    width: 90%;
+    padding: 0px;
+  }
+  
+  .img-change {
+    width: 313px;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .about-3-left {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .about-bottom {
+    color: #2d2e2e;
+    background-color: #FAF9F8;
+    display: block;
+  }
+  
+  .signup_container {
+    padding: 0 40px;
+  }
+  
+  .login-container {
+    padding: 0 40px;
+  }
+  
+  .top-container {
+    padding: 0px 20px;
+  }
+  
+  .card{
+    width: 33%;
+  }
+  
+  .article_img_list {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    display: none;
+  }
+  
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+  }
+  
+  .show-container {
+    padding: 0 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+  }
+  
+  .article_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+ .card-container {
+    display: flex;
+  }
+  
+  .edit-container {
+    padding: 0 20px;
+  }
+  
+  .p-11 {
+    font-size: 11px;
+  }
+  
+  .atricle-text-container {
+    padding: 0 20px;
+  }
+  
+  .article-contaicer {
+    padding: 0 20px;
+  }
+  
+  img {
+    vertical-align: middle;
+    border-style: none;
+    width: 90%;
+  }  
+  
+  .p-10 {
+    font-size:10px;
+  }
+  
+  .btn {
+    font-size: small;
+  }
+  
+  .favorite-container {
+    padding: 0 20px;
+  }
+  
+  .search-container {
+    padding: 0 13px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+

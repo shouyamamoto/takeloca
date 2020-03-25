@@ -1,0 +1,37 @@
+<% if user_signed_in? %>
+<div class="container mt-2"> 
+  <nav class="navbar navbar-expand-sm">
+    <%= link_to 'takeloca', users_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+  </button>
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav list-unstyled">
+        <li class="nav-item"><%= link_to 'Mypage', user_path(current_user), class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'About', about_path, class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'Favorite', favorites_user_path(current_user), class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'Post', new_article_path, class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link'%></li>
+    </ul>  
+  </div>
+  </nav>
+</div>
+<% else %>
+<div class="container mt-2"> 
+  <nav class="navbar navbar-expand-sm">
+    <a class="navbar-brand" href="/">takeloca</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav list-unstyled">
+      <li class="nav-item"><%= link_to 'About', about_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to 'Signup', new_user_registration_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to 'Login', new_user_session_path, class: 'nav-link' %></li>
+    </ul>
+  </div>
+  </nav>
+</div>
+<% end %>

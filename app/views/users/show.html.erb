@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+<div class="container show-container">
+  <div class="profile my-5">
+  <p class="text-center"><%= @user.name %></p>
+  <% if @user.id == current_user.id %>
+    <%= link_to '編集', edit_user_path, class: 'btn btn-success ml-5' %>
+  <% end %>
+  </div>
+  
+  <hr>
+  <h4 class="text-center my-4">投稿一覧</h4>
+  <%= render 'articles/user_articles', articles: @articles %>
+</div>
+<% else %>
+  <%= render 'sessions/new'%>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="card-container">
+<% articles.each do |article| %>
+  <%= link_to article do %>
+    <div class="card mr-1 mb-1" >
+      <%= attachment_image_tag article, :article_image, class: 'article-image-list'%>
+      <div class="card-body">
+        <h6 class="card-title"><%= article.title%></h6>
+        <p class="card-text"><%= article.created_at.strftime("%Y年%m月%d日")%></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+</div>

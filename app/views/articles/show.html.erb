@@ -1,0 +1,39 @@
+<div class="container article-contaicer mt-5">
+  <div class="text-center">
+    <% if @article.article_image %>
+      <%= image_tag attachment_url(@article, :article_image, :fill, 700, 525, format: "jpg") %>
+    <% else %>
+      <%= image_tag('/images/noimage.png') %>
+    <% end %>
+  </div>
+  
+  
+  <div class="atricle-text-container">
+    <div class="text-muted text-right my-3">
+    <p>撮影場所:<%= @article.location %> <%= @article.details %></p>
+    <p>投稿日:<%= @article.created_at.strftime("%Y年%m月%d日") %></p>
+    <% unless @article.user_id == current_user.id %>
+      <%= render 'favorites/favorite_button', article: @article %>
+    <% end %>
+    </div>
+    
+    <div>
+      <h3><%= @article.title %></h3>
+    </div>
+    <hr>
+    
+    <div>
+      <p class="mt-4 p-10"><%= simple_format @article.body %></p>
+    </div>
+    
+    <% if @article.user_id == current_user.id %>
+      <%= link_to '編集する', edit_article_path(@article), class: 'btn btn-success mt-5'%>
+      <%= link_to '削除する', article_path(@article), method: :delete, data: {confirm: "削除しますか？" }, class: 'btn btn-danger mt-5' %>
+    <% else %>
+      <%= link_to @article.user.name + 'さんの記事一覧', user_path(id: @article.user_id), class: 'btn btn-success mt-5'%>
+    <% end %>
+  </div>
+  
+  
+
+</div>

@@ -1,0 +1,39 @@
+<div class="container text-center">
+  <h4 class="my-5">About takeloca</h4>
+  <p class="mb-5">この写真はどこで撮ったんだろう…。なんて思ったことないですか？</p>
+</div>
+<div class="jumbotron about-top">
+  <div class="about-1-left">
+    <p class="mb-5">"takeloca"は、みんなが写真を投稿できて、どこで撮影したかを共有してくれます！</p>
+    <p><span>1.</span>検索フォームにある撮影場所を選択してください。（検索機能は新規登録が必要です。）</p>
+    <p><span>2.</span>検索ボタンを押してみよう！</p>
+    <p><span>3.</span>ヒットした記事一覧が表示されます！</p>
+  </div>
+  <div class="about-1-right">
+    <img src="/images/search.jpg", class="about-img">
+  </div>
+</div>
+<div class="jumbotron about-mid">
+  <div class="about-2-left">
+    <img src="/images/favorite.jpg", class="about-img img-change">
+  </div>
+  <div class="about-2-right">
+    <p>気になる記事を見つけたらお気に入りボタン(☆)をクリック！</p>
+    <p>（※お気に入りすると★になります。）</p>
+  </div>
+</div>
+<div class="jumbotron about-bottom">
+  <div class="about-3-left">
+    <p>お気に入りした記事はお気に入りページ(メニューにあるFavorite)で確認することができます！</p>
+  </div>
+  <div class="about-3-right">
+    <img src="/images/favolist.jpg", class="about-img img-change">
+  </div>
+</div>
+
+<h4 class="text-center my-5 mx-4">みんなで情報を共有して、カメラライフを楽しみましょう!!</h4>
+
+<div class="text-center mb-4">
+  <%= link_to '新規登録', new_user_registration_path, class: 'btn btn-success' %>
+  <%= link_to 'ログイン', new_user_session_path, class: 'btn btn-primary ml-3' %>
+</div>
