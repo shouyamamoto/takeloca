@@ -1,4 +1,9 @@
 class Article < ApplicationRecord
+  validates :article_image, presence: true
+  validates :title, presence: true
+  validates :body, presence: true
+  validates :location, presence: true
+  
   belongs_to :user
   has_many :favorites, dependent: :destroy
   has_many :favorite_users, through: :reverses_of_favorites, source: :user
