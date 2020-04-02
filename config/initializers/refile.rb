@@ -1,8 +1,8 @@
 require "refile/s3"
 
 aws = {
-  access_key_id: ENV["access_key_id"],
-  secret_access_key: ENV["secret_access_key"],
+  access_key_id: ENV["ACCESS_KEY_ID"],
+  secret_access_key: ENV["SECRET_ACCESS_KEY"],
   region: "sa-east-1",
   bucket: "takeloca",
 }
